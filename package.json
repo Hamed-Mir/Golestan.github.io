@@ -1,0 +1,24 @@
+{
+  "name": "golestan.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "golestan": "sass --watch ./scss/main.scss ./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamed-Mir/Golestan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hamed-Mir/Golestan.github.io/issues"
+  },
+  "homepage": "https://github.com/Hamed-Mir/Golestan.github.io#readme",
+  "dependencies": {
+    "sass": "^1.105.2"
+  }
+}
