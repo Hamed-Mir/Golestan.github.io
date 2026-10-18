@@ -1,10 +1,13 @@
 body {
     max-width: 1600px;
     margin: 0px auto;
+    font-family: "Roboto", sans-serif;
 }
 
+
 $bg-color: #333;
-@mixin text($color,$font-size,$fontw){
+
+@mixin text($color, $font-size, $fontw) {
     color: $color;
     font-size: $font-size;
     font-weight: $fontw;
@@ -16,12 +19,17 @@ $bg-color: #333;
         width: 100%;
         height: 192px;
         background-color: $bg-color;
+        position: sticky;
+        top: 0;
     }
 
-    header img {
-        width: 143px;
+    header a{
         display: block;
+        width: 143px;
         margin: 0px auto;
+        img {
+            width: 143px;
+        }
     }
 
     .menu {
@@ -82,38 +90,46 @@ $bg-color: #333;
             height: 350px;
             display: flex;
             justify-content: center;
+
             img {
                 width: 300px;
             }
         }
-        h2{
-            @include text(#ff0000,36px,normal);
+
+        h2 {
+            @include text(#ff0000, 36px, normal);
             margin-left: 40px;
         }
-        p{
-            @include text(#7c7d7e,25px,normal);
+
+        p {
+            @include text(#7c7d7e, 25px, normal);
             margin-left: 40px;
         }
     }
-    .devider-line{
+
+    .devider-line {
         width: 95%;
         height: 1px;
         background-color: $bg-color;
         margin: 10px auto 25px;
     }
-    .about{
+
+    .about {
         width: 100%;
         margin: 40px auto;
         padding: 20px;
-        h2{
-            @include text(#ff0000, 22px,normal);
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
             margin-bottom: 25px
         }
-        p{
+
+        p {
             @include text(#7a7a7a, 18px, normal);
         }
     }
-    .rice{
+
+    .rice {
         width: 100%;
         height: 241px;
         background-image: url("../images/3.jpg");
@@ -122,7 +138,9 @@ $bg-color: #333;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        h2{
+        margin-top: 15px;
+
+        h2 {
             margin-bottom: -37px;
             padding: 15px 20px 10px;
             @include text(#ffffff, 37px, bold);
@@ -130,30 +148,313 @@ $bg-color: #333;
             text-align: right;
         }
     }
-    .golestan-rice{
+
+    .golestan-rice {
         width: 100%;
         margin-top: 85px;
         padding: 20px;
-        h2{
-            @include text(#ff0000, 22px,normal);
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
             margin-bottom: 25px
         }
-        p{
+
+        p {
             @include text(#7a7a7a, 18px, normal);
             margin-bottom: 50px;
         }
-        a{
+
+        a {
             text-decoration: none;
             padding: 12px 24px;
             @include text(#7c7d7e, 14px, normal);
-            background-color:white;
+            background-color: white;
             border: 1px solid #7c7d7e;
             border-radius: 10px;
         }
+        a:hover{
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
     }
-    
-    
-    
+
+    .tea {
+        width: 100%;
+        height: 241px;
+        background-image: url("../images/4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 15px;
+
+        h2 {
+            margin-bottom: -37px;
+            padding: 15px 20px 10px;
+            @include text(#ffffff, 37px, bold);
+            background-color: #ed1c24;
+            text-align: right;
+        }
+    }
+
+    .golestan-tea {
+        width: 100%;
+        margin-top: 85px;
+        padding: 20px;
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
+            margin-bottom: 25px
+        }
+
+        p {
+            @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 24px;
+            @include text(#7c7d7e, 14px, normal);
+            background-color: white;
+            border: 1px solid #7c7d7e;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
+    }
+
+    .pistachios {
+        width: 100%;
+        height: 241px;
+        background-image: url("../images/5.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 15px;
+
+        h2 {
+            margin-bottom: -37px;
+            padding: 15px 20px 10px;
+            @include text(#ffffff, 37px, bold);
+            background-color: #ed1c24;
+            text-align: right;
+        }
+    }
+
+    .golestan-pistachios {
+        width: 100%;
+        margin-top: 85px;
+        padding: 20px;
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
+            margin-bottom: 25px
+        }
+
+        p {
+            @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 24px;
+            @include text(#7c7d7e, 14px, normal);
+            background-color: white;
+            border: 1px solid #7c7d7e;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
+    }
+
+    .green-banner {
+        width: 100%;
+        height: 600px;
+        background-color: #105153;
+        border-bottom: 1px solid #169287;
+        margin-top: 15px;
+        div {
+            width: 100%;
+            text-align: center;
+            h2 {
+                @include text(#169287, 30px, normal);
+                display: inline-block;
+                padding-top: 220px;
+            }
+
+            p {
+                @include text(#2fcaba, 20px, normal);
+                display: inline-block;
+            }
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        div:last-of-type {
+            width: 100%;
+            height: 1px;
+            background-color: #169287;
+            margin-bottom: 50px;
+        }
+    }
+
+    .cream-banner {
+        width: 100%;
+        height: 20px;
+        background-color: #e4d7a2;
+    }
+
+    .golestan-charitable {
+        width: 100%;
+        margin-top: 85px;
+        padding: 20px;
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
+            margin-bottom: 25px
+        }
+
+        p {
+            @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 24px;
+            @include text(#7c7d7e, 14px, normal);
+            background-color: white;
+            border: 1px solid #7c7d7e;
+            border-radius: 10px;
+        }
+        a:hover{
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
+    }
+
+    .social-media-links{
+        width: 100%;
+        height: 60px;
+        background-color: #eef0ef;
+        margin-top: 50px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;  
+            margin-right: 5px;
+        }
+        .link1{
+            background: url("../images/7.png") -93px -6px;
+        }
+        .link2{
+            background: url("../images/7.png") -177px -7px;
+        }
+        .link3{
+            background: url("../images/7.png") -135px -6px;
+        }
+        .link4{
+            background: url("../images/7.png") -50px -6px;
+        }
+        .link5{
+            background: url("../images/7.png") -522px -6px;
+        }
+        .link6{
+            background: url("../images/7.png") -651px -6px;
+        }
+
+        .link1:hover{
+            background: url("../images/7.png") -92px -135px;
+        }
+        .link2:hover{
+            background: url("../images/7.png") -178px -135px;
+        }
+        .link3:hover{
+            background: url("../images/7.png") -135px -135px;
+        }
+        .link4:hover{
+            background: url("../images/7.png") -50px -135px;
+        }
+        .link5:hover{
+            background: url("../images/7.png") -522px -135px;
+        }
+        .link6:hover{
+            background: url("../images/7.png") -651px -135px;
+        }
+    }
+    .red-banner{
+        width: 100%;
+        height: 25px;
+        background-color: #ff0000;
+    }
+
+    footer{
+        width: 100%;
+        background-color: $bg-color;
+        padding: 10px;
+        img{
+            display: block;
+            margin: 0px auto 20px;
+        }
+        h2{
+            border-top: 2px solid #4a4a4a;
+            border-bottom: 2px solid #4a4a4a;
+            padding: 5px;
+            font-size: 16px;
+            text-align: center;
+            color: white;
+        }
+        ul{
+            list-style-type: none;
+            text-align: center;
+            padding: 30px 30px 0px;
+            font-size: 15px;
+            a{
+                text-decoration: none;
+                color: #bcbec0;
+            }
+            a:hover{
+                color: white;
+            }
+        }
+        ul:last-of-type{
+            margin-bottom: 50px;
+        }
+        div{
+            width: 100%;
+            text-align: center;
+            p:first-of-type{
+                font-size: 15px;
+                color: #9f9f9f;
+            }
+            p:last-of-type{
+                font-size: 14px;
+                margin-top: -15px;
+                color: #7b7b7b;
+            }
+        }
+    }
+
 
 
 }

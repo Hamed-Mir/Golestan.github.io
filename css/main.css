@@ -1,6 +1,7 @@
 body {
   max-width: 1600px;
   margin: 0px auto;
+  font-family: "Roboto", sans-serif;
 }
 
 @media all and (max-width: 767px) {
@@ -8,11 +9,16 @@ body {
     width: 100%;
     height: 192px;
     background-color: #333;
+    position: sticky;
+    top: 0;
   }
-  header img {
-    width: 143px;
+  header a {
     display: block;
+    width: 143px;
     margin: 0px auto;
+  }
+  header a img {
+    width: 143px;
   }
   .menu button {
     width: 100%;
@@ -109,6 +115,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-top: 15px;
   }
   .rice h2 {
     margin-bottom: -37px;
@@ -145,6 +152,289 @@ body {
     background-color: white;
     border: 1px solid #7c7d7e;
     border-radius: 10px;
+  }
+  .golestan-rice a:hover {
+    background-color: red;
+    color: white;
+    transition: all 400ms ease 0ms;
+  }
+  .tea {
+    width: 100%;
+    height: 241px;
+    background-image: url("../images/4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 15px;
+  }
+  .tea h2 {
+    margin-bottom: -37px;
+    padding: 15px 20px 10px;
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: bold;
+    background-color: #ed1c24;
+    text-align: right;
+  }
+  .golestan-tea {
+    width: 100%;
+    margin-top: 85px;
+    padding: 20px;
+  }
+  .golestan-tea h2 {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 25px;
+  }
+  .golestan-tea p {
+    color: #7a7a7a;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+  .golestan-tea a {
+    text-decoration: none;
+    padding: 12px 24px;
+    color: #7c7d7e;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: white;
+    border: 1px solid #7c7d7e;
+    border-radius: 10px;
+  }
+  .golestan-tea a:hover {
+    background-color: red;
+    color: white;
+    transition: all 400ms ease 0ms;
+  }
+  .pistachios {
+    width: 100%;
+    height: 241px;
+    background-image: url("../images/5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 15px;
+  }
+  .pistachios h2 {
+    margin-bottom: -37px;
+    padding: 15px 20px 10px;
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: bold;
+    background-color: #ed1c24;
+    text-align: right;
+  }
+  .golestan-pistachios {
+    width: 100%;
+    margin-top: 85px;
+    padding: 20px;
+  }
+  .golestan-pistachios h2 {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 25px;
+  }
+  .golestan-pistachios p {
+    color: #7a7a7a;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+  .golestan-pistachios a {
+    text-decoration: none;
+    padding: 12px 24px;
+    color: #7c7d7e;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: white;
+    border: 1px solid #7c7d7e;
+    border-radius: 10px;
+  }
+  .golestan-pistachios a:hover {
+    background-color: red;
+    color: white;
+    transition: all 400ms ease 0ms;
+  }
+  .green-banner {
+    width: 100%;
+    height: 600px;
+    background-color: #105153;
+    border-bottom: 1px solid #169287;
+    margin-top: 15px;
+  }
+  .green-banner div {
+    width: 100%;
+    text-align: center;
+  }
+  .green-banner div h2 {
+    color: #169287;
+    font-size: 30px;
+    font-weight: normal;
+    display: inline-block;
+    padding-top: 220px;
+  }
+  .green-banner div p {
+    color: #2fcaba;
+    font-size: 20px;
+    font-weight: normal;
+    display: inline-block;
+  }
+  .green-banner img {
+    display: block;
+    margin: auto;
+  }
+  .green-banner div:last-of-type {
+    width: 100%;
+    height: 1px;
+    background-color: #169287;
+    margin-bottom: 50px;
+  }
+  .cream-banner {
+    width: 100%;
+    height: 20px;
+    background-color: #e4d7a2;
+  }
+  .golestan-charitable {
+    width: 100%;
+    margin-top: 85px;
+    padding: 20px;
+  }
+  .golestan-charitable h2 {
+    color: #ff0000;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 25px;
+  }
+  .golestan-charitable p {
+    color: #7a7a7a;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 50px;
+  }
+  .golestan-charitable a {
+    text-decoration: none;
+    padding: 12px 24px;
+    color: #7c7d7e;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: white;
+    border: 1px solid #7c7d7e;
+    border-radius: 10px;
+  }
+  .golestan-charitable a:hover {
+    background-color: red;
+    color: white;
+    transition: all 400ms ease 0ms;
+  }
+  .social-media-links {
+    width: 100%;
+    height: 60px;
+    background-color: #eef0ef;
+    margin-top: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-media-links div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .social-media-links .link1 {
+    background: url("../images/7.png") -93px -6px;
+  }
+  .social-media-links .link2 {
+    background: url("../images/7.png") -177px -7px;
+  }
+  .social-media-links .link3 {
+    background: url("../images/7.png") -135px -6px;
+  }
+  .social-media-links .link4 {
+    background: url("../images/7.png") -50px -6px;
+  }
+  .social-media-links .link5 {
+    background: url("../images/7.png") -522px -6px;
+  }
+  .social-media-links .link6 {
+    background: url("../images/7.png") -651px -6px;
+  }
+  .social-media-links .link1:hover {
+    background: url("../images/7.png") -92px -135px;
+  }
+  .social-media-links .link2:hover {
+    background: url("../images/7.png") -178px -135px;
+  }
+  .social-media-links .link3:hover {
+    background: url("../images/7.png") -135px -135px;
+  }
+  .social-media-links .link4:hover {
+    background: url("../images/7.png") -50px -135px;
+  }
+  .social-media-links .link5:hover {
+    background: url("../images/7.png") -522px -135px;
+  }
+  .social-media-links .link6:hover {
+    background: url("../images/7.png") -651px -135px;
+  }
+  .red-banner {
+    width: 100%;
+    height: 25px;
+    background-color: #ff0000;
+  }
+  footer {
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+  }
+  footer img {
+    display: block;
+    margin: 0px auto 20px;
+  }
+  footer h2 {
+    border-top: 2px solid #4a4a4a;
+    border-bottom: 2px solid #4a4a4a;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+  }
+  footer ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 30px 30px 0px;
+    font-size: 15px;
+  }
+  footer ul a {
+    text-decoration: none;
+    color: #bcbec0;
+  }
+  footer ul a:hover {
+    color: white;
+  }
+  footer ul:last-of-type {
+    margin-bottom: 50px;
+  }
+  footer div {
+    width: 100%;
+    text-align: center;
+  }
+  footer div p:first-of-type {
+    font-size: 15px;
+    color: #9f9f9f;
+  }
+  footer div p:last-of-type {
+    font-size: 14px;
+    margin-top: -15px;
+    color: #7b7b7b;
   }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
