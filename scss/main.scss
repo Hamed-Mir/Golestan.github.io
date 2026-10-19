@@ -21,12 +21,17 @@ $bg-color: #333;
         background-color: $bg-color;
         position: sticky;
         top: 0;
+
+        .mid-size-nav {
+            display: none;
+        }
     }
 
-    header a{
+    header a {
         display: block;
         width: 143px;
         margin: 0px auto;
+
         img {
             width: 143px;
         }
@@ -105,6 +110,14 @@ $bg-color: #333;
             @include text(#7c7d7e, 25px, normal);
             margin-left: 40px;
         }
+
+        p:last-of-type {
+            display: none;
+        }
+
+        a {
+            display: none;
+        }
     }
 
     .devider-line {
@@ -114,9 +127,28 @@ $bg-color: #333;
         margin: 10px auto 25px;
     }
 
-    .about {
+    .products {
         width: 100%;
-        margin: 40px auto;
+        height: 241px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 15px;
+
+        h2 {
+            margin-bottom: -37px;
+            padding: 15px 20px 10px;
+            @include text(#ffffff, 37px, bold);
+            background-color: #ed1c24;
+            text-align: right;
+        }
+    }
+
+    .title {
+        width: 100%;
+        margin-top: 85px;
         padding: 20px;
 
         h2 {
@@ -126,157 +158,20 @@ $bg-color: #333;
 
         p {
             @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
         }
     }
 
     .rice {
-        width: 100%;
-        height: 241px;
         background-image: url("../images/3.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
-
-        h2 {
-            margin-bottom: -37px;
-            padding: 15px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
-            text-align: right;
-        }
-    }
-
-    .golestan-rice {
-        width: 100%;
-        margin-top: 85px;
-        padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-
-        a {
-            text-decoration: none;
-            padding: 12px 24px;
-            @include text(#7c7d7e, 14px, normal);
-            background-color: white;
-            border: 1px solid #7c7d7e;
-            border-radius: 10px;
-        }
-        a:hover{
-            background-color: red;
-            color: white;
-            transition: all 400ms ease 0ms;
-        }
     }
 
     .tea {
-        width: 100%;
-        height: 241px;
         background-image: url("../images/4.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
-
-        h2 {
-            margin-bottom: -37px;
-            padding: 15px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
-            text-align: right;
-        }
-    }
-
-    .golestan-tea {
-        width: 100%;
-        margin-top: 85px;
-        padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-
-        a {
-            text-decoration: none;
-            padding: 12px 24px;
-            @include text(#7c7d7e, 14px, normal);
-            background-color: white;
-            border: 1px solid #7c7d7e;
-            border-radius: 10px;
-        }
-        a:hover{
-            background-color: red;
-            color: white;
-            transition: all 400ms ease 0ms;
-        }
     }
 
     .pistachios {
-        width: 100%;
-        height: 241px;
         background-image: url("../images/5.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
-
-        h2 {
-            margin-bottom: -37px;
-            padding: 15px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
-            text-align: right;
-        }
-    }
-
-    .golestan-pistachios {
-        width: 100%;
-        margin-top: 85px;
-        padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-
-        a {
-            text-decoration: none;
-            padding: 12px 24px;
-            @include text(#7c7d7e, 14px, normal);
-            background-color: white;
-            border: 1px solid #7c7d7e;
-            border-radius: 10px;
-        }
-        a:hover{
-            background-color: red;
-            color: white;
-            transition: all 400ms ease 0ms;
-        }
     }
 
     .green-banner {
@@ -285,9 +180,11 @@ $bg-color: #333;
         background-color: #105153;
         border-bottom: 1px solid #169287;
         margin-top: 15px;
+
         div {
             width: 100%;
             text-align: center;
+
             h2 {
                 @include text(#169287, 30px, normal);
                 display: inline-block;
@@ -319,37 +216,7 @@ $bg-color: #333;
         background-color: #e4d7a2;
     }
 
-    .golestan-charitable {
-        width: 100%;
-        margin-top: 85px;
-        padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-
-        a {
-            text-decoration: none;
-            padding: 12px 24px;
-            @include text(#7c7d7e, 14px, normal);
-            background-color: white;
-            border: 1px solid #7c7d7e;
-            border-radius: 10px;
-        }
-        a:hover{
-            background-color: red;
-            color: white;
-            transition: all 400ms ease 0ms;
-        }
-    }
-
-    .social-media-links{
+    .social-media-links {
         width: 100%;
         height: 60px;
         background-color: #eef0ef;
@@ -358,99 +225,117 @@ $bg-color: #333;
         display: flex;
         justify-content: center;
         align-items: center;
-        div{
+
+        div {
             width: 30px;
             height: 30px;
-            border-radius: 50%;  
+            border-radius: 50%;
             margin-right: 5px;
         }
-        .link1{
+
+        .link1 {
             background: url("../images/7.png") -93px -6px;
         }
-        .link2{
+
+        .link2 {
             background: url("../images/7.png") -177px -7px;
         }
-        .link3{
+
+        .link3 {
             background: url("../images/7.png") -135px -6px;
         }
-        .link4{
+
+        .link4 {
             background: url("../images/7.png") -50px -6px;
         }
-        .link5{
+
+        .link5 {
             background: url("../images/7.png") -522px -6px;
         }
-        .link6{
+
+        .link6 {
             background: url("../images/7.png") -651px -6px;
         }
 
-        .link1:hover{
+        .link1:hover {
             background: url("../images/7.png") -92px -135px;
         }
-        .link2:hover{
+
+        .link2:hover {
             background: url("../images/7.png") -178px -135px;
         }
-        .link3:hover{
+
+        .link3:hover {
             background: url("../images/7.png") -135px -135px;
         }
-        .link4:hover{
+
+        .link4:hover {
             background: url("../images/7.png") -50px -135px;
         }
-        .link5:hover{
+
+        .link5:hover {
             background: url("../images/7.png") -522px -135px;
         }
-        .link6:hover{
-            background: url("../images/7.png") -651px -135px;
+
+        .link6:hover {
+            background: url("../fimages/7.png") -651px -135px;
         }
     }
-    .red-banner{
+
+    .red-banner {
         width: 100%;
         height: 25px;
         background-color: #ff0000;
     }
 
-    footer{
+    footer {
         width: 100%;
         background-color: $bg-color;
         padding: 10px;
-        img{
+
+        img {
             display: block;
             margin: 0px auto 20px;
         }
-        h2{
+
+        h2 {
             border-top: 2px solid #4a4a4a;
             border-bottom: 2px solid #4a4a4a;
             padding: 5px;
-            font-size: 16px;
             text-align: center;
-            color: white;
+            @include text(white, 16px, normal)
         }
-        ul{
+
+        ul {
             list-style-type: none;
             text-align: center;
             padding: 30px 30px 0px;
-            font-size: 15px;
-            a{
+
+            a {
                 text-decoration: none;
-                color: #bcbec0;
+                @include text(#bcbec0, 15px, normal)
             }
-            a:hover{
+
+            a:hover {
                 color: white;
             }
         }
-        ul:last-of-type{
+
+        ul:last-of-type {
             margin-bottom: 50px;
         }
-        div{
+
+        div {
             width: 100%;
             text-align: center;
-            p:first-of-type{
-                font-size: 15px;
-                color: #9f9f9f;
+
+            p:first-of-type {
+                @include text(#9f9f9f, 15px, normal);
             }
-            p:last-of-type{
-                font-size: 14px;
+
+            p:last-of-type {
                 margin-top: -15px;
-                color: #7b7b7b;
+                @include text(#7b7b7b, 14px, normal);
             }
         }
     }
@@ -463,14 +348,180 @@ $bg-color: #333;
 
     header {
         width: 100%;
-        height: 192px;
-        background-color: #4a4a4a;
+        height: 145px;
+        background-color: $bg-color;
+        position: sticky;
+        top: 0;
+
+        .menu {
+            display: none;
+        }
+
+        .mid-size-nav {
+            width: 100%;
+            margin-top: 15px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                list-style-type: none;
+
+                li {
+                    padding: 0px 15px;
+                    border-right: 1px solid #afb2b4;
+
+                    a {
+                        display: block;
+                        width: fit-content;
+                        text-decoration: none;
+                        @include text(#afb2b4, 16px, normal)
+                    }
+
+                    a:hover {
+                        color: white;
+                    }
+                }
+
+                .md-size-sub-menu {
+                    position: relative;
+                }
+
+                .md-size-sub-menu-hover {
+                    width: 150px;
+                    padding: 0px;
+                    background-color: $bg-color;
+                    list-style-type: none;
+                    position: absolute;
+                    text-align: center;
+                    border: none;
+                    transform: translate(-35px, 5px);
+                    transition: all 400ms ease 0ms;
+                    visibility: hidden;
+
+                    li {
+                        margin: 10px 0px;
+                    }
+                }
+
+                .md-size-sub-menu:hover .md-size-sub-menu-hover {
+                    visibility: visible;
+                }
+
+                li:last-of-type {
+                    border-right: none;
+                }
+            }
+        }
     }
 
-    header img {
+    header a {
+        display: block;
         width: 143px;
+        margin: 0px auto;
+
+        img {
+            width: 143px;
+        }
+    }
+
+    .banner {
+        width: 100%;
+        height: 482px;
+        background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+
+        div {
+            width: 45%;
+            height: 390px;
+            display: flex;
+            justify-content: right;
+            order: 1;
+
+            img {
+                width: 300px;
+            }
+        }
+
+        h2 {
+            width: 45%;
+            @include text(#ff0000, 32px, normal);
+            order: 0;
+            margin-top: 55px;
+        }
+
+        p:first-of-type {
+            display: none;
+        }
+
+        p {
+            width: 45%;
+            @include text(#898989, 18px, normal);
+            order: 2;
+            margin-top: -255px;
+        }
+
+        a {
+            display: block;
+            height: fit-content;
+            order: 3;
+            text-decoration: none;
+            padding: 12px 24px;
+            @include text(#7c7d7e, 14px, normal);
+            background-color: white;
+            border: 1px solid #7c7d7e;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width:992px) {
 
@@ -482,5 +533,41 @@ $bg-color: #333;
 
     header img {
         width: 143px;
+    }
+}
+
+.to-top {
+    width: 40px;
+    height: 40px;
+    background-color: #27272760;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    a {
+        display: block;
+        @include text(white, 35px, normal);
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+}
+
+.title {
+    a {
+        text-decoration: none;
+        padding: 12px 24px;
+        @include text(#7c7d7e, 14px, normal);
+        background-color: white;
+        border: 1px solid #7c7d7e;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        background-color: red;
+        color: white;
+        transition: all 400ms ease 0ms;
     }
 }
