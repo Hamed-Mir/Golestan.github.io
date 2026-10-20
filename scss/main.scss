@@ -1,7 +1,11 @@
-body {
+body{
+    background-color: rgb(216, 214, 214);
+}
+body>div {
     max-width: 1600px;
     margin: 0px auto;
     font-family: "Roboto", sans-serif;
+    background-color: white;
 }
 
 
@@ -86,45 +90,46 @@ $bg-color: #333;
 
     .banner {
         width: 100%;
-        height: 510px;
+        height: 512px;
         background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
-        padding: 10px;
+        padding: 50px;
 
-        div {
-            width: 100%;
-            height: 350px;
+        div:first-of-type {
+            height: 390px;
             display: flex;
             justify-content: center;
+            margin-top: -20px;
 
             img {
                 width: 300px;
             }
         }
 
-        h2 {
-            @include text(#ff0000, 36px, normal);
-            margin-left: 40px;
-        }
+        div:nth-of-type(2) {
+            h2 {
+                @include text(#ff0000, 32px, normal);
+            }
 
-        p {
-            @include text(#7c7d7e, 25px, normal);
-            margin-left: 40px;
-        }
 
-        p:last-of-type {
-            display: none;
-        }
+            p:first-of-type {
+                @include text(#898989, 18px, normal);
+            }
 
-        a {
-            display: none;
+            p:last-of-type {
+                display: none;
+            }
+
+            a {
+                display: none;
+            }
         }
     }
 
     .devider-line {
         width: 95%;
         height: 1px;
-        background-color: $bg-color;
-        margin: 10px auto 25px;
+        background-color: #7a7a7a;
+        margin: 20px auto 25px;
     }
 
     .products {
@@ -162,6 +167,10 @@ $bg-color: #333;
         }
     }
 
+    .about-golestan-sub {
+        display: none;
+    }
+
     .rice {
         background-image: url("../images/3.jpg");
     }
@@ -174,118 +183,12 @@ $bg-color: #333;
         background-image: url("../images/5.jpg");
     }
 
-    .green-banner {
-        width: 100%;
-        height: 600px;
-        background-color: #105153;
-        border-bottom: 1px solid #169287;
-        margin-top: 15px;
-
-        div {
-            width: 100%;
-            text-align: center;
-
-            h2 {
-                @include text(#169287, 30px, normal);
-                display: inline-block;
-                padding-top: 220px;
-            }
-
-            p {
-                @include text(#2fcaba, 20px, normal);
-                display: inline-block;
-            }
-        }
-
-        img {
-            display: block;
-            margin: auto;
-        }
-
-        div:last-of-type {
-            width: 100%;
-            height: 1px;
-            background-color: #169287;
-            margin-bottom: 50px;
-        }
+    .mid-size-products-devider {
+        display: none;
     }
 
-    .cream-banner {
-        width: 100%;
-        height: 20px;
-        background-color: #e4d7a2;
-    }
-
-    .social-media-links {
-        width: 100%;
-        height: 60px;
-        background-color: #eef0ef;
-        margin-top: 50px;
-        font-size: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        div {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
-
-        .link1 {
-            background: url("../images/7.png") -93px -6px;
-        }
-
-        .link2 {
-            background: url("../images/7.png") -177px -7px;
-        }
-
-        .link3 {
-            background: url("../images/7.png") -135px -6px;
-        }
-
-        .link4 {
-            background: url("../images/7.png") -50px -6px;
-        }
-
-        .link5 {
-            background: url("../images/7.png") -522px -6px;
-        }
-
-        .link6 {
-            background: url("../images/7.png") -651px -6px;
-        }
-
-        .link1:hover {
-            background: url("../images/7.png") -92px -135px;
-        }
-
-        .link2:hover {
-            background: url("../images/7.png") -178px -135px;
-        }
-
-        .link3:hover {
-            background: url("../images/7.png") -135px -135px;
-        }
-
-        .link4:hover {
-            background: url("../images/7.png") -50px -135px;
-        }
-
-        .link5:hover {
-            background: url("../images/7.png") -522px -135px;
-        }
-
-        .link6:hover {
-            background: url("../fimages/7.png") -651px -135px;
-        }
-    }
-
-    .red-banner {
-        width: 100%;
-        height: 25px;
-        background-color: #ff0000;
+    .devider-line-products {
+        display: none;
     }
 
     footer {
@@ -325,7 +228,7 @@ $bg-color: #333;
             margin-bottom: 50px;
         }
 
-        div {
+        .right-deserved {
             width: 100%;
             text-align: center;
 
@@ -429,112 +332,543 @@ $bg-color: #333;
         height: 482px;
         background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
         padding: 50px;
-        display: flex;
-        flex-wrap: wrap;
 
-        div {
-            width: 45%;
+        div:first-of-type {
             height: 390px;
             display: flex;
             justify-content: right;
             order: 1;
+            margin-right: 20px;
 
             img {
                 width: 300px;
             }
         }
 
-        h2 {
-            width: 45%;
-            @include text(#ff0000, 32px, normal);
+        div:nth-of-type(2) {
             order: 0;
-            margin-top: 55px;
-        }
 
-        p:first-of-type {
-            display: none;
+            h2 {
+                @include text(#ff0000, 32px, normal);
+                margin-top: 55px;
+                margin-bottom: 20px;
+            }
+
+
+            p:first-of-type {
+                display: none;
+            }
+
+            p:last-of-type {
+                @include text(#898989, 18px, normal);
+            }
+
+            a {
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                text-decoration: none;
+                padding: 12px 24px;
+                @include text(#7c7d7e, 14px, normal);
+                background-color: white;
+                border: 1px solid #7c7d7e;
+                border-radius: 10px;
+                align-self: center
+            }
+
+            a:hover {
+                background-color: red;
+                color: white;
+                transition: all 400ms ease 0ms;
+            }
+        }
+    }
+
+    .devider-line {
+        width: 95%;
+        height: 1px;
+        background-color: $bg-color;
+        margin: 20px auto 25px;
+    }
+
+    .products {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 15px;
+
+        h2 {
+            width: 280px;
+            height: 114px;
+            margin-bottom: -37px;
+            padding: 50px 20px 10px;
+            @include text(#ffffff, 37px, bold);
+            background-color: #ed1c24;
+            margin-left: 80px;
+        }
+    }
+
+    .title {
+        width: 660px;
+        margin: 85px auto;
+        padding: 20px;
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
+            margin-bottom: 25px
         }
 
         p {
-            width: 45%;
-            @include text(#898989, 18px, normal);
-            order: 2;
-            margin-top: -255px;
+            @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
         }
-
-        a {
-            display: block;
-            height: fit-content;
-            order: 3;
-            text-decoration: none;
-            padding: 12px 24px;
-            @include text(#7c7d7e, 14px, normal);
-            background-color: white;
-            border: 1px solid #7c7d7e;
-            border-radius: 10px;
-        }
-
-        a:hover {
-            background-color: red;
-            color: white;
-            transition: all 400ms ease 0ms;
-        }
-
     }
+
+    .about-golestan-sub {
+        width: 100%;
+        height: 130px;
+        align-content: start;
+        padding: 0px 20px;
+
+        div {
+            justify-content: space-between;
+
+            div {
+                text-align: center;
+                @include text(#7a7a7a, 17px, normal)
+            }
+        }
+    }
+
+    .about-golestan-sub>div>div::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #7a7a7a;
+        display: block;
+    }
+
+    .rice {
+        background-image: url("../images/3.jpg");
+    }
+
+    .tea {
+        background-image: url("../images/4.jpg");
+    }
+
+    .pistachios {
+        background-image: url("../images/5.jpg");
+    }
+
+    .mid-size-products-devider {
+        width: 100%;
+        height: 25px;
+        background-color: #e4d7a2;
+    }
+
+    .devider-line-products {
+        width: 95%;
+        height: 1px;
+        background-color: #7a7a7a;
+        margin: 30px auto 25px;
+    }
+
+    footer {
+        width: 100%;
+        background-color: $bg-color;
+        padding: 10px;
+
+        div:first-of-type {
+            max-width: 700px;
+        }
+
+        img {
+            display: block;
+            margin: 0px auto 20px;
+        }
+
+        h2 {
+            border-top: 2px solid #4a4a4a;
+            border-bottom: 2px solid #4a4a4a;
+            padding: 5px;
+            text-align: center;
+            @include text(white, 16px, normal)
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 30px 0px 0px;
+
+            a {
+                text-decoration: none;
+                @include text(#bcbec0, 15px, normal)
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+
+        ul:last-of-type {
+            margin-bottom: 50px;
+        }
+
+        .right-deserved {
+            width: 100%;
+            text-align: center;
+
+            p:first-of-type {
+                @include text(#9f9f9f, 15px, normal);
+            }
+
+            p:last-of-type {
+                margin-top: -15px;
+                @include text(#7b7b7b, 14px, normal);
+            }
+        }
+    }
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media all and (min-width:992px) {
 
     header {
         width: 100%;
-        height: 192px;
-        background-color: #4a4a4a;
+        height: 90px;
+        background-color: $bg-color;
+        position: sticky;
+        top: 0;
+
+        .menu {
+            display: none;
+        }
+
+        div {
+            width: 100%;
+            max-width: 1110px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            margin: 0px auto;
+
+            .mid-size-nav {
+                width: 820px;
+                max-width: 820px;
+                display: flex;
+                justify-content: center;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+
+                    li {
+                        padding: 0px 15px;
+                        border-right: 1px solid #afb2b4;
+
+                        a {
+                            display: block;
+                            width: fit-content;
+                            text-decoration: none;
+                            @include text(#afb2b4, 16px, normal)
+                        }
+
+                        a:hover {
+                            color: white;
+                        }
+                    }
+
+                    .md-size-sub-menu {
+                        position: relative;
+                    }
+
+                    .md-size-sub-menu-hover {
+                        width: 150px;
+                        padding: 0px;
+                        background-color: $bg-color;
+                        list-style-type: none;
+                        position: absolute;
+                        text-align: center;
+                        border: none;
+                        transform: translate(-35px, 5px);
+                        transition: all 400ms ease 0ms;
+                        visibility: hidden;
+
+                        li {
+                            margin: 10px 0px;
+                        }
+                    }
+
+                    .md-size-sub-menu:hover .md-size-sub-menu-hover {
+                        visibility: visible;
+                    }
+
+                    li:last-of-type {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    header>div>a {
+        display: block;
+        width: fit-content;
+        width: 143px;
+        margin-left: 80px;
+        transform: translateY(45px);
+        img {
+            width: 143px;
+        }
+    }
+    .banner {
+        width: 100%;
+        height: 482px;
+        background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
+        padding: 50px;
+        
+        div:first-of-type {
+            height: 390px;
+            display: flex;
+            justify-content: center;
+            order: 1;
+            img {
+                width: 300px;
+            }
+        }
+
+        div:nth-of-type(2) {
+            order: 0;
+            max-width: 480px;
+            h2 {
+                @include text(#ff0000, 32px, normal);
+                margin-top: 55px;
+                margin-bottom: 20px;
+            }
+
+
+            p:first-of-type {
+                display: none;
+            }
+
+            p:last-of-type {
+                @include text(#898989, 18px, normal);
+            }
+
+            a {
+                display: block;
+                width: fit-content;
+                height: fit-content;
+                text-decoration: none;
+                padding: 12px 24px;
+                @include text(#7c7d7e, 14px, normal);
+                background-color: white;
+                border: 1px solid #7c7d7e;
+                border-radius: 10px;
+                align-self: center
+            }
+
+            a:hover {
+                background-color: red;
+                color: white;
+                transition: all 400ms ease 0ms;
+            }
+        }
     }
 
-    header img {
-        width: 143px;
+    .devider-line {
+        width: 95%;
+        height: 1px;
+        background-color: $bg-color;
+        margin: 20px auto 25px;
+    }
+
+    .products {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 15px;
+
+        h2 {
+            width: 280px;
+            height: 114px;
+            margin-bottom: -37px;
+            padding: 50px 20px 10px;
+            @include text(#ffffff, 37px, bold);
+            background-color: #ed1c24;
+            margin-left: 80px;
+        }
+    }
+
+    .title {
+        width: 660px;
+        margin: 85px auto;
+        padding: 20px;
+
+        h2 {
+            @include text(#ff0000, 22px, normal);
+            margin-bottom: 25px
+        }
+
+        p {
+            @include text(#7a7a7a, 18px, normal);
+            margin-bottom: 50px;
+        }
+    }
+
+    .about-golestan-sub {
+        width: 100%;
+        max-width: 750px;
+        height: 130px;
+        align-content: start;
+        padding: 0px 20px;
+
+        div {
+            justify-content: space-between;
+
+            div {
+                text-align: center;
+                @include text(#7a7a7a, 17px, normal)
+            }
+        }
+    }
+
+    .about-golestan-sub>div>div::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #7a7a7a;
+        display: block;
+    }
+
+    .rice {
+        background-image: url("../images/3.jpg");
+    }
+
+    .tea {
+        background-image: url("../images/4.jpg");
+    }
+
+    .pistachios {
+        background-image: url("../images/5.jpg");
+    }
+
+    .mid-size-products-devider {
+        width: 100%;
+        height: 25px;
+        background-color: #e4d7a2;
+    }
+
+    .devider-line-products {
+        width: 95%;
+        height: 1px;
+        background-color: #7a7a7a;
+        margin: 30px auto 25px;
+    }
+
+    footer {
+        width: 100%;
+        background-color: $bg-color;
+        padding: 10px;
+
+        div:first-of-type {
+            max-width: 700px;
+        }
+
+        img {
+            display: block;
+            margin: 0px auto 20px;
+        }
+
+        h2 {
+            border-top: 2px solid #4a4a4a;
+            border-bottom: 2px solid #4a4a4a;
+            padding: 5px;
+            text-align: center;
+            @include text(white, 16px, normal)
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 30px 0px 0px;
+
+            a {
+                text-decoration: none;
+                @include text(#bcbec0, 15px, normal)
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+
+        ul:last-of-type {
+            margin-bottom: 50px;
+        }
+
+        .right-deserved {
+            width: 100%;
+            text-align: center;
+
+            p:first-of-type {
+                @include text(#9f9f9f, 15px, normal);
+            }
+
+            p:last-of-type {
+                margin-top: -15px;
+                @include text(#7b7b7b, 14px, normal);
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .to-top {
     width: 40px;
@@ -570,4 +904,118 @@ $bg-color: #333;
         color: white;
         transition: all 400ms ease 0ms;
     }
+}
+
+.green-banner {
+    width: 100%;
+    height: 600px;
+    background-color: #105153;
+    border-bottom: 1px solid #169287;
+    margin-top: 15px;
+
+    div {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            @include text(#169287, 30px, normal);
+            display: inline-block;
+            padding-top: 220px;
+        }
+
+        p {
+            @include text(#2fcaba, 20px, normal);
+            display: inline-block;
+        }
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    div:last-of-type {
+        width: 100%;
+        height: 1px;
+        background-color: #169287;
+        margin-bottom: 50px;
+    }
+}
+
+.cream-banner {
+    width: 100%;
+    height: 20px;
+    background-color: #e4d7a2;
+}
+
+.social-media-links {
+    width: 100%;
+    height: 60px;
+    background-color: #eef0ef;
+    margin-top: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .link1 {
+        background: url("../images/7.png") -93px -6px;
+    }
+
+    .link2 {
+        background: url("../images/7.png") -177px -7px;
+    }
+
+    .link3 {
+        background: url("../images/7.png") -135px -6px;
+    }
+
+    .link4 {
+        background: url("../images/7.png") -50px -6px;
+    }
+
+    .link5 {
+        background: url("../images/7.png") -522px -6px;
+    }
+
+    .link6 {
+        background: url("../images/7.png") -651px -6px;
+    }
+
+    .link1:hover {
+        background: url("../images/7.png") -92px -135px;
+    }
+
+    .link2:hover {
+        background: url("../images/7.png") -178px -135px;
+    }
+
+    .link3:hover {
+        background: url("../images/7.png") -135px -135px;
+    }
+
+    .link4:hover {
+        background: url("../images/7.png") -50px -135px;
+    }
+
+    .link5:hover {
+        background: url("../images/7.png") -522px -135px;
+    }
+
+    .link6:hover {
+        background: url("../fimages/7.png") -651px -135px;
+    }
+}
+
+.red-banner {
+    width: 100%;
+    height: 25px;
+    background-color: #ff0000;
 }
