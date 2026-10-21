@@ -1,6 +1,9 @@
-body{
+@import "variable.scss";
+
+body {
     background-color: rgb(216, 214, 214);
 }
+
 body>div {
     max-width: 1600px;
     margin: 0px auto;
@@ -8,23 +11,275 @@ body>div {
     background-color: white;
 }
 
+header {
+    background-color: $bg-color;
+    position: sticky;
+    top: 0;
+}
 
-$bg-color: #333;
+.to-top {
+    @include size(40px, 40px);
+    background-color: #27272760;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 
-@mixin text($color, $font-size, $fontw) {
-    color: $color;
-    font-size: $font-size;
-    font-weight: $fontw;
+    a {
+        display: block;
+        @include text(white, 35px, normal);
+        text-align: center;
+        text-decoration: none;
+        @include size(100%, 100%);
+        z-index: 999;
+    }
+}
+
+.banner {
+    background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
+    padding: 50px;
+
+    div:first-of-type {
+        height: 390px;
+        display: flex;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    div:nth-of-type(2) {
+        h2 {
+            @include text(#ff0000, 32px, normal);
+        }
+
+        p:last-of-type {
+            @include text(#898989, 18px, normal);
+        }
+
+        p:first-of-type {
+            @include text(#898989, 18px, normal);
+        }
+
+        a {
+            display: block;
+            @include size(fit-content, fit-content);
+            text-decoration: none;
+            padding: 12px 24px;
+            @include text(#7c7d7e, 14px, normal);
+            background-color: white;
+            border: 1px solid #7c7d7e;
+            border-radius: 10px;
+            align-self: center
+        }
+
+        a:hover {
+            background-color: red;
+            color: white;
+            transition: all 400ms ease 0ms;
+        }
+    }
+}
+
+.devider-line {
+    @include size(95%, 1px);
+    background-color: rgb(216, 214, 214);
+    margin: 20px auto 25px;
+}
+
+.title {
+    h2 {
+        @include text(#ff0000, 22px, normal);
+        margin-bottom: 25px
+    }
+
+    p {
+        @include text(#7a7a7a, 18px, normal);
+        margin-bottom: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 12px 24px;
+        @include text(#7c7d7e, 14px, normal);
+        background-color: white;
+        border: 1px solid #7c7d7e;
+        border-radius: 10px;
+    }
+
+    a:hover {
+        background-color: red;
+        color: white;
+        transition: all 400ms ease 0ms;
+    }
+}
+
+.about-golestan-sub {
+    @include size(100%, 130px);
+    max-width: 750px;
+    align-content: start;
+    padding: 0px 20px;
+
+    div {
+        justify-content: space-between;
+
+        div {
+            text-align: center;
+            @include text(#7a7a7a, 17px, normal)
+        }
+    }
+}
+
+.about-golestan-sub>div>div::after {
+    content: "";
+    @include size(100%, 1px);
+    background-color: #7a7a7a;
+    display: block;
+}
+
+.products {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 15px;
+
+    h2 {
+        margin-bottom: -37px;
+        @include text(#ffffff, 37px, bold);
+        background-color: #ed1c24;
+    }
+}
+
+.devider-line-products {
+    @include size(95%, 1px);
+    background-color: rgb(216, 214, 214);
+    margin: 30px auto 25px;
+}
+
+.mid-size-products-devider {
+    @include size(100%, 25px);
+    background-color: #e4d7a2;
+}
+
+.green-banner {
+    @include size(100%, 600px);
+    background-color: #105153;
+    border-bottom: 1px solid #169287;
+    margin-top: 15px;
+
+    div {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            @include text(#169287, 30px, normal);
+            display: inline-block;
+            padding-top: 220px;
+        }
+
+        p {
+            @include text(#2fcaba, 20px, normal);
+            display: inline-block;
+        }
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    div:last-of-type {
+        @include size(100%, 1px);
+        background-color: #169287;
+        margin-bottom: 50px;
+    }
+}
+
+.cream-banner {
+    @include size(100%, 20px);
+    background-color: #e4d7a2;
+}
+
+.social-media-links {
+    @include size(100%, 60px);
+    background-color: #eef0ef;
+    margin-top: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        @include size(30px, 30px);
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .link1 {
+        background: url("../images/7.png") -93px -6px;
+    }
+
+    .link2 {
+        background: url("../images/7.png") -177px -7px;
+    }
+
+    .link3 {
+        background: url("../images/7.png") -135px -6px;
+    }
+
+    .link4 {
+        background: url("../images/7.png") -50px -6px;
+    }
+
+    .link5 {
+        background: url("../images/7.png") -522px -6px;
+    }
+
+    .link6 {
+        background: url("../images/7.png") -651px -6px;
+    }
+
+    .link1:hover {
+        background: url("../images/7.png") -92px -135px;
+    }
+
+    .link2:hover {
+        background: url("../images/7.png") -178px -135px;
+    }
+
+    .link3:hover {
+        background: url("../images/7.png") -135px -135px;
+    }
+
+    .link4:hover {
+        background: url("../images/7.png") -50px -135px;
+    }
+
+    .link5:hover {
+        background: url("../images/7.png") -522px -135px;
+    }
+
+    .link6:hover {
+        background: url("../fimages/7.png") -651px -135px;
+    }
+}
+
+.red-banner {
+    @include size(100%, 25px);
+    background-color: #ff0000;
+}
+
+footer {
+    width: 100%;
+    background-color: $bg-color;
+    padding: 10px;
 }
 
 @media all and (max-width:767px) {
 
     header {
-        width: 100%;
-        height: 192px;
-        background-color: $bg-color;
-        position: sticky;
-        top: 0;
+        @include size(100%, 192px);
 
         .mid-size-nav {
             display: none;
@@ -89,32 +344,14 @@ $bg-color: #333;
     }
 
     .banner {
-        width: 100%;
-        height: 512px;
-        background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
-        padding: 50px;
+        @include size(100%, 512px);
 
         div:first-of-type {
-            height: 390px;
-            display: flex;
             justify-content: center;
             margin-top: -20px;
-
-            img {
-                width: 300px;
-            }
         }
 
-        div:nth-of-type(2) {
-            h2 {
-                @include text(#ff0000, 32px, normal);
-            }
-
-
-            p:first-of-type {
-                @include text(#898989, 18px, normal);
-            }
-
+        div>div:nth-of-type(2) {
             p:last-of-type {
                 display: none;
             }
@@ -125,29 +362,12 @@ $bg-color: #333;
         }
     }
 
-    .devider-line {
-        width: 95%;
-        height: 1px;
-        background-color: #7a7a7a;
-        margin: 20px auto 25px;
-    }
-
     .products {
-        width: 100%;
-        height: 241px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
+        @include size(100%, 241px);
 
         h2 {
-            margin-bottom: -37px;
-            padding: 15px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
             text-align: right;
+            padding: 15px 20px 10px;
         }
     }
 
@@ -155,16 +375,6 @@ $bg-color: #333;
         width: 100%;
         margin-top: 85px;
         padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
     }
 
     .about-golestan-sub {
@@ -192,9 +402,6 @@ $bg-color: #333;
     }
 
     footer {
-        width: 100%;
-        background-color: $bg-color;
-        padding: 10px;
 
         img {
             display: block;
@@ -242,19 +449,12 @@ $bg-color: #333;
             }
         }
     }
-
-
-
 }
 
 @media all and (min-width:768px) and (max-width:991px) {
 
     header {
-        width: 100%;
-        height: 145px;
-        background-color: $bg-color;
-        position: sticky;
-        top: 0;
+        @include size(100%, 145px);
 
         .menu {
             display: none;
@@ -328,87 +528,36 @@ $bg-color: #333;
     }
 
     .banner {
-        width: 100%;
-        height: 482px;
-        background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
-        padding: 50px;
+        @include size(100%, 482px);
 
         div:first-of-type {
-            height: 390px;
-            display: flex;
             justify-content: right;
             order: 1;
             margin-right: 20px;
-
-            img {
-                width: 300px;
-            }
         }
 
-        div:nth-of-type(2) {
+        div>div:nth-of-type(2) {
             order: 0;
 
             h2 {
-                @include text(#ff0000, 32px, normal);
                 margin-top: 55px;
                 margin-bottom: 20px;
             }
-
 
             p:first-of-type {
                 display: none;
             }
 
-            p:last-of-type {
-                @include text(#898989, 18px, normal);
-            }
-
-            a {
-                display: block;
-                width: fit-content;
-                height: fit-content;
-                text-decoration: none;
-                padding: 12px 24px;
-                @include text(#7c7d7e, 14px, normal);
-                background-color: white;
-                border: 1px solid #7c7d7e;
-                border-radius: 10px;
-                align-self: center
-            }
-
-            a:hover {
-                background-color: red;
-                color: white;
-                transition: all 400ms ease 0ms;
-            }
         }
     }
 
-    .devider-line {
-        width: 95%;
-        height: 1px;
-        background-color: $bg-color;
-        margin: 20px auto 25px;
-    }
-
     .products {
-        width: 100%;
-        height: 500px;
-        background-size: cover;
+        @include size(100%, 500px);
         background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
 
         h2 {
-            width: 280px;
-            height: 114px;
-            margin-bottom: -37px;
+            @include size(280px, 114px);
             padding: 50px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
             margin-left: 80px;
         }
     }
@@ -417,40 +566,6 @@ $bg-color: #333;
         width: 660px;
         margin: 85px auto;
         padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-    }
-
-    .about-golestan-sub {
-        width: 100%;
-        height: 130px;
-        align-content: start;
-        padding: 0px 20px;
-
-        div {
-            justify-content: space-between;
-
-            div {
-                text-align: center;
-                @include text(#7a7a7a, 17px, normal)
-            }
-        }
-    }
-
-    .about-golestan-sub>div>div::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: #7a7a7a;
-        display: block;
     }
 
     .rice {
@@ -465,24 +580,7 @@ $bg-color: #333;
         background-image: url("../images/5.jpg");
     }
 
-    .mid-size-products-devider {
-        width: 100%;
-        height: 25px;
-        background-color: #e4d7a2;
-    }
-
-    .devider-line-products {
-        width: 95%;
-        height: 1px;
-        background-color: #7a7a7a;
-        margin: 30px auto 25px;
-    }
-
     footer {
-        width: 100%;
-        background-color: $bg-color;
-        padding: 10px;
-
         div:first-of-type {
             max-width: 700px;
         }
@@ -533,20 +631,12 @@ $bg-color: #333;
             }
         }
     }
-
-
-
-
 }
 
 @media all and (min-width:992px) {
 
     header {
-        width: 100%;
-        height: 90px;
-        background-color: $bg-color;
-        position: sticky;
-        top: 0;
+        @include size(100%, 90px);
 
         .menu {
             display: none;
@@ -565,6 +655,7 @@ $bg-color: #333;
                 max-width: 820px;
                 display: flex;
                 justify-content: center;
+
                 ul {
                     display: flex;
                     justify-content: center;
@@ -618,96 +709,50 @@ $bg-color: #333;
             }
         }
     }
+
     header>div>a {
         display: block;
         width: fit-content;
         width: 143px;
         margin-left: 80px;
         transform: translateY(45px);
+
         img {
             width: 143px;
         }
     }
+
     .banner {
-        width: 100%;
-        height: 482px;
-        background-image: linear-gradient(to bottom, white 20%, rgb(216, 214, 214) 100%);
-        padding: 50px;
-        
+        @include size(100%, 482px);
+
         div:first-of-type {
-            height: 390px;
-            display: flex;
             justify-content: center;
             order: 1;
-            img {
-                width: 300px;
-            }
         }
 
-        div:nth-of-type(2) {
+        div>div:nth-of-type(2) {
             order: 0;
             max-width: 480px;
+
             h2 {
-                @include text(#ff0000, 32px, normal);
                 margin-top: 55px;
                 margin-bottom: 20px;
             }
-
 
             p:first-of-type {
                 display: none;
             }
 
-            p:last-of-type {
-                @include text(#898989, 18px, normal);
-            }
-
-            a {
-                display: block;
-                width: fit-content;
-                height: fit-content;
-                text-decoration: none;
-                padding: 12px 24px;
-                @include text(#7c7d7e, 14px, normal);
-                background-color: white;
-                border: 1px solid #7c7d7e;
-                border-radius: 10px;
-                align-self: center
-            }
-
-            a:hover {
-                background-color: red;
-                color: white;
-                transition: all 400ms ease 0ms;
-            }
         }
     }
 
-    .devider-line {
-        width: 95%;
-        height: 1px;
-        background-color: $bg-color;
-        margin: 20px auto 25px;
-    }
-
     .products {
-        width: 100%;
-        height: 500px;
-        background-size: cover;
+        @include size(100%, 500px);
         background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-top: 15px;
 
         h2 {
-            width: 280px;
-            height: 114px;
-            margin-bottom: -37px;
+            @include size(280px, 114px);
             padding: 50px 20px 10px;
-            @include text(#ffffff, 37px, bold);
-            background-color: #ed1c24;
             margin-left: 80px;
         }
     }
@@ -716,41 +761,6 @@ $bg-color: #333;
         width: 660px;
         margin: 85px auto;
         padding: 20px;
-
-        h2 {
-            @include text(#ff0000, 22px, normal);
-            margin-bottom: 25px
-        }
-
-        p {
-            @include text(#7a7a7a, 18px, normal);
-            margin-bottom: 50px;
-        }
-    }
-
-    .about-golestan-sub {
-        width: 100%;
-        max-width: 750px;
-        height: 130px;
-        align-content: start;
-        padding: 0px 20px;
-
-        div {
-            justify-content: space-between;
-
-            div {
-                text-align: center;
-                @include text(#7a7a7a, 17px, normal)
-            }
-        }
-    }
-
-    .about-golestan-sub>div>div::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: #7a7a7a;
-        display: block;
     }
 
     .rice {
@@ -765,23 +775,7 @@ $bg-color: #333;
         background-image: url("../images/5.jpg");
     }
 
-    .mid-size-products-devider {
-        width: 100%;
-        height: 25px;
-        background-color: #e4d7a2;
-    }
-
-    .devider-line-products {
-        width: 95%;
-        height: 1px;
-        background-color: #7a7a7a;
-        margin: 30px auto 25px;
-    }
-
     footer {
-        width: 100%;
-        background-color: $bg-color;
-        padding: 10px;
 
         div:first-of-type {
             max-width: 700px;
@@ -833,189 +827,4 @@ $bg-color: #333;
             }
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.to-top {
-    width: 40px;
-    height: 40px;
-    background-color: #27272760;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    a {
-        display: block;
-        @include text(white, 35px, normal);
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        z-index: 999;
-    }
-}
-
-.title {
-    a {
-        text-decoration: none;
-        padding: 12px 24px;
-        @include text(#7c7d7e, 14px, normal);
-        background-color: white;
-        border: 1px solid #7c7d7e;
-        border-radius: 10px;
-    }
-
-    a:hover {
-        background-color: red;
-        color: white;
-        transition: all 400ms ease 0ms;
-    }
-}
-
-.green-banner {
-    width: 100%;
-    height: 600px;
-    background-color: #105153;
-    border-bottom: 1px solid #169287;
-    margin-top: 15px;
-
-    div {
-        width: 100%;
-        text-align: center;
-
-        h2 {
-            @include text(#169287, 30px, normal);
-            display: inline-block;
-            padding-top: 220px;
-        }
-
-        p {
-            @include text(#2fcaba, 20px, normal);
-            display: inline-block;
-        }
-    }
-
-    img {
-        display: block;
-        margin: auto;
-    }
-
-    div:last-of-type {
-        width: 100%;
-        height: 1px;
-        background-color: #169287;
-        margin-bottom: 50px;
-    }
-}
-
-.cream-banner {
-    width: 100%;
-    height: 20px;
-    background-color: #e4d7a2;
-}
-
-.social-media-links {
-    width: 100%;
-    height: 60px;
-    background-color: #eef0ef;
-    margin-top: 50px;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    div {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 5px;
-    }
-
-    .link1 {
-        background: url("../images/7.png") -93px -6px;
-    }
-
-    .link2 {
-        background: url("../images/7.png") -177px -7px;
-    }
-
-    .link3 {
-        background: url("../images/7.png") -135px -6px;
-    }
-
-    .link4 {
-        background: url("../images/7.png") -50px -6px;
-    }
-
-    .link5 {
-        background: url("../images/7.png") -522px -6px;
-    }
-
-    .link6 {
-        background: url("../images/7.png") -651px -6px;
-    }
-
-    .link1:hover {
-        background: url("../images/7.png") -92px -135px;
-    }
-
-    .link2:hover {
-        background: url("../images/7.png") -178px -135px;
-    }
-
-    .link3:hover {
-        background: url("../images/7.png") -135px -135px;
-    }
-
-    .link4:hover {
-        background: url("../images/7.png") -50px -135px;
-    }
-
-    .link5:hover {
-        background: url("../images/7.png") -522px -135px;
-    }
-
-    .link6:hover {
-        background: url("../fimages/7.png") -651px -135px;
-    }
-}
-
-.red-banner {
-    width: 100%;
-    height: 25px;
-    background-color: #ff0000;
 }

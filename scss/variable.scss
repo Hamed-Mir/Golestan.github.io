@@ -1,0 +1,12 @@
+$bg-color: #333;
+
+@mixin text($color, $font-size, $fontw) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $fontw;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
